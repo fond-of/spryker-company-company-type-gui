@@ -15,7 +15,7 @@ class CompanyCompanyTypeGuiCommunicationFactory extends AbstractCommunicationFac
      *
      * @return \FondOfSpryker\Zed\CompanyCompanyTypeGui\Dependency\Facade\CompanyCompanyTypeGuiToCompanyTypeFacadeInterface
      */
-    public function getCompanyTypeFacade(): CompanyCompanyTypeGuiToCompanyTypeFacadeInterface
+    protected function getCompanyTypeFacade(): CompanyCompanyTypeGuiToCompanyTypeFacadeInterface
     {
         return $this->getProvidedDependency(CompanyCompanyTypeGuiDependencyProvider::FACADE_COMPANY_TYPE);
     }
