@@ -63,7 +63,9 @@ class CompanyTypeCompanyFormExpanderPluginTest extends Unit
 
         $this->companyTypeCompanyFormExpanderPlugin = new CompanyTypeCompanyFormExpanderPlugin();
 
-        (new ReflectionProperty(get_parent_class($this->companyTypeCompanyFormExpanderPlugin), 'factory'))->setValue(
+        $factoryProperty = new ReflectionProperty(get_parent_class($this->companyTypeCompanyFormExpanderPlugin), 'factory');
+        $factoryProperty->setAccessible(true);
+        $factoryProperty->setValue(
             $this->companyTypeCompanyFormExpanderPlugin,
             $this->companyCompanyTypeGuiCommunicationFactoryMock
         );

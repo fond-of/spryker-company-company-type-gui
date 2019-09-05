@@ -68,15 +68,19 @@ class CompanyCompanyTypeFormDataProviderTest extends Unit
     public function testGetOptions(): void
     {
         $this->companyCompanyTypeGuiToCompanyTypeFacadeMock->expects($this->atLeastOnce())
-            ->with('getCompanyTypes')
+            ->method('getCompanyTypes')
             ->willReturn($this->companyTypeCollectionTransferMock);
 
+        $this->companyTypeCollectionTransferMock->expects($this->atLeastOnce())
+            ->method('getCompanyTypes')
+            ->willReturn($this->companyTypeTransferMocks);
+
         $this->companyTypeTransferMock->expects($this->atLeastOnce())
-            ->with('getIdCompanyType')
+            ->method('getIdCompanyType')
             ->willReturn(1);
 
         $this->companyTypeTransferMock->expects($this->atLeastOnce())
-            ->with('getName')
+            ->method('getName')
             ->willReturn('Test');
 
         $options = $this->companyCompanyTypeFormDataProvider->getOptions();
