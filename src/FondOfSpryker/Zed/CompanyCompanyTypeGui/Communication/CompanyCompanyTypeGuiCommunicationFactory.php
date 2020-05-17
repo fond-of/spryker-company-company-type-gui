@@ -11,8 +11,6 @@ use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 class CompanyCompanyTypeGuiCommunicationFactory extends AbstractCommunicationFactory
 {
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\CompanyCompanyTypeGui\Dependency\Facade\CompanyCompanyTypeGuiToCompanyTypeFacadeInterface
      */
     protected function getCompanyTypeFacade(): CompanyCompanyTypeGuiToCompanyTypeFacadeInterface

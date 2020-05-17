@@ -37,8 +37,6 @@ class CompanyTypeCompanyFormExpanderPluginTest extends Unit
     protected $companyTypeCompanyFormExpanderPlugin;
 
     /**
-     * @throws
-     *
      * @return void
      */
     protected function _before(): void
