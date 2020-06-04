@@ -12,7 +12,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 class CompanyTypeCompanyFormExpanderPlugin extends AbstractPlugin implements CompanyFormExpanderPluginInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
